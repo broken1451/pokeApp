@@ -1,0 +1,25 @@
+
+<div style="text-align:center">
+    <div class="grid-layout" >
+        <!-- <div  > -->
+        <div *ngFor="let pokemon of pokemons | slice:0:14; let i=index">
+            <mat-card class="pokemon-card" >
+                <mat-card-title>{{pokemon.name | titlecase}}</mat-card-title> 
+                <div class="id"></div>
+                <div class="background-image">
+                    <img mat-card-image [src]="pokemon.img" />
+                </div>
+                <mat-card-content>
+                    <div >
+                        <div class="types" >
+                            <mat-chip [color]="pokemon.color" selected>
+                              {{pokemon.type}}
+                            </mat-chip>
+                        </div>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,46 @@
+<mat-toolbar>
+    <img class="pokemon-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1280px-International_Pok%C3%A9mon_logo.svg.png" />
+
+    <div class="search-box">
+        <input matInput class="search-input" type="text" placeholder="Enter Pokemon name or id..." />
+        <button mat-button class="close-button"  matSuffix mat-icon-button aria-label="Clear" >
+      <mat-icon>close</mat-icon>
+    </button>
+    </div>
+
+    <div class="filter-component">
+        <mat-label class="filter">Filter by Type</mat-label>
+        <mat-form-field class="form-field">
+            <mat-select  >
+                <mat-option>None</mat-option>
+                <mat-option >
+                    
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+
+    <div class="filter-component">
+        <mat-label class="filter">Filter by Abilities</mat-label>
+        <mat-form-field class="form-field">
+            <mat-select  multiple>
+                <mat-select-trigger>
+                    <!-- quiero que de mi currentAbilites en la posición 0 parta en blanco, porque no he elegido nada -->
+                    <!-- quiero que de mi currentAbilites cuando ya tengo un largo, pueda ir seleccionando varias o que también pueda ir disminuyendo, por eso voy analizando dichos casos -->
+                    <span  class="additional-selection">
+               
+              </span>
+                </mat-select-trigger>
+                <mat-option >
+                  1
+                </mat-option>
+                <mat-option >
+                  3
+                </mat-option>
+                <mat-option >
+                  2
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+</mat-toolbar>
