@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
-import { Observable, throwError, Subject } from 'rxjs';
+import { Observable, throwError, Subject, of } from 'rxjs';
 import { PokeAPI, PokeSprites, Sprites } from '../interfaces/poke.interfaces';
 import { catchError, map } from 'rxjs/operators';
 
@@ -62,7 +62,7 @@ export class PokemonService {
     return this.httpClient.get(`${URLSprites}/${name}`).pipe(
       catchError((err: any) => {
         console.log({err})
-        return this._handleError(err);
+        return of(err);
       })
     );
   }

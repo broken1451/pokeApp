@@ -66,10 +66,10 @@ export class PokeHomeComponent implements OnInit, DoCheck, AfterContentInit {
           for (let i = 0; i < pokemon.results.length; i++) {
             const element = pokemon.results[i];
             this.getSprites(element.name).subscribe((res) => {
-              element.img = res.sprites.front_default;
+              element.img = res?.sprites?.front_default;
               element.color = 'primary';
               let type: string[] = [];
-              if (res.types.length) {
+              if (res?.types?.length) {
                 this.arrtypes = res.types;
                 // console.log( this.arrtypes)
                 this.arrtypes.forEach((types) => {

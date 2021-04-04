@@ -5,6 +5,7 @@ import { PagesRoutingModule } from './pages-routing.module';
 import { PokeHomeComponent } from './poke-home/poke-home.component';
 import { MaterialModule } from '../material/material.module';
 import { SearchComponent } from './search/search.component';
+import { PipesModule } from '../pipes/pipes.module';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import { SearchComponent } from './search/search.component';
   imports: [
     CommonModule,
     PagesRoutingModule,
-    MaterialModule
+    MaterialModule,
+    PipesModule
   ],
   exports:[PokeHomeComponent]
 })

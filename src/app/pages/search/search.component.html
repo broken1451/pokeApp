@@ -22,7 +22,7 @@
                 <mat-card-title>{{pokemon.pokemon.name}}</mat-card-title> 
                 <div class="id"></div>
                 <div class="background-image">
-                    <img mat-card-image [src]="pokemon.img" />
+                    <img mat-card-image [src]="pokemon.img | imagen" />
                 </div>
                 <mat-card-content>
                     <div  >
