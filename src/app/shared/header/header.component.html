@@ -11,10 +11,10 @@
     <div class="filter-component">
         <mat-label class="filter">Filter by Type</mat-label>
         <mat-form-field class="form-field">
-            <mat-select  >
-                <mat-option>None</mat-option>
-                <mat-option >
-                    
+            <mat-select (selectionChange)='cambioSelect($event)'> 
+                <mat-option disabled>None</mat-option>
+                <mat-option *ngFor="let types of types;" [value]='types'>
+                   {{types.name | titlecase}}
                 </mat-option>
             </mat-select>
         </mat-form-field>
@@ -43,4 +43,6 @@
             </mat-select>
         </mat-form-field>
     </div>
+
+
 </mat-toolbar>

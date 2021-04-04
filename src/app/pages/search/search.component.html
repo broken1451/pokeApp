@@ -16,23 +16,27 @@
                 </mat-form-field>
             </div> -->
 
-            <!-- {{pokemons.pokemon.name}} -->
-        <div *ngFor="let pokemon of pokemons; let i=index">
+
+        <div  *ngFor="let pokemon of pokemons; let i=index">
             <mat-card class="pokemon-card" >
-                <mat-card-title>{{pokemon.name}}</mat-card-title> 
+                <mat-card-title>{{pokemon.pokemon.name}}</mat-card-title> 
                 <div class="id"></div>
                 <div class="background-image">
                     <img mat-card-image [src]="pokemon.img" />
                 </div>
                 <mat-card-content>
                     <div  >
-                        <div *ngFor="let types of pokemon.type" class="types" [style.background]="_getTypeColour(types)">
-                            {{types }}
-                        </div>
+                        <!-- <div *ngFor="let pokemon of pokemons | keyvalue" class="types" [style.background]="_getTypeColour(pokemon.type)"> -->
+                        <!-- <div *ngFor="let types of pokemon.type" class="types" [style.background]="_getTypeColour(types)"> -->
+                            <div *ngFor="let types of pokemon.type" class="types" [style.background]="_getTypeColour(types)">
+                                <!-- <mat-chip [color]="pokemon.color" selected>
+                                
+                                </mat-chip> -->
+                                {{types }}
+                            </div>
                     </div>
                 </mat-card-content>
             </mat-card>
         </div>
     </div>
 </div>
-

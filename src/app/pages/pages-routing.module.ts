@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { PokeHomeComponent } from './poke-home/poke-home.component';
+import { SearchComponent } from './search/search.component';
 
 
 const routes: Routes = [
@@ -10,6 +11,10 @@ const routes: Routes = [
       {
         path:'pokemons',
         component: PokeHomeComponent
+      },
+      {
+        path:'search/:name',
+        component: SearchComponent
       },
       {
         path:'**',
